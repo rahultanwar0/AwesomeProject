@@ -15,6 +15,12 @@ import {
 export default function App() {
   let name = "hello world"
   let array = [{id:"1",name:"rahul"},{id:"2",name:"deepak"},{id:"3",name:"sachin"}]
+  const ReanderId = () =>{
+    return array.map(item=> {
+        return <Text>{item.id}</Text>
+      })
+    
+  }
   return (
     <View>
       {
@@ -26,6 +32,7 @@ export default function App() {
         })
 
       }
+      <ReanderId/>
      </View>
   );
 }
