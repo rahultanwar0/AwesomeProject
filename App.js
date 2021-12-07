@@ -13,9 +13,14 @@ import {
 
  
 export default function App() {
+  let name = "hello world"
   return (
     <View>
-      <Text>hello world</Text>
-    </View>
+      {
+        // name ? <Text>{name}</Text> : <Text>no name</Text>
+        name && <Text>{name}</Text>
+
+      }
+     </View>
   );
 }
