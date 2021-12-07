@@ -15,7 +15,7 @@ import {
 export default function App() {
   return (
     <View>
-      <Text>hello</Text>
+      <Text>hello world</Text>
     </View>
   );
 }
