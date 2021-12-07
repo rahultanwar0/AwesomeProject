@@ -43,9 +43,19 @@ export default function App() {
       onPress={
         () =>{
 
-           setmyname("kkkkkkks")
+           setmyname("Button1")
         }
       }/>
+       <Button
+      title = "clickMe"
+      color= "black"
+      onPress={
+        () =>{
+
+           setmyname("Button2")
+        }
+      }/>
+      
      </View>
   );
 }
