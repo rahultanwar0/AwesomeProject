@@ -22,6 +22,7 @@ export default function App() {
     
   }
   const [myname,setmyname] = useState("tanwar")
+  
 
    return (
     <View>
@@ -37,8 +38,8 @@ export default function App() {
 
       }
       <ReanderId/>
-      <Button
-      title = "clickMe"
+       <Button
+      title = "Button1"
       color= "black"
       onPress={
         () =>{
@@ -47,7 +48,7 @@ export default function App() {
         }
       }/>
        <Button
-      title = "clickMe"
+      title = "Button2"
       color= "black"
       onPress={
         () =>{
@@ -55,6 +56,9 @@ export default function App() {
            setmyname("Button2")
         }
       }/>
+
+
+      <Image  source={require('./assets/plash.png')} style={{height:100,width:100}}/>
       
      </View>
   );
