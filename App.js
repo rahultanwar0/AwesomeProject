@@ -13,7 +13,8 @@ import {
   TextInput,
   Modal,
 } from 'react-native';
-import MyNewComponentt from './component/Mybutton'
+import {Mybutton} from './component/Mybutton'
+import Login from './components/Login'
 const MyNewComponent = () =>{
   return (
     <View>
@@ -56,8 +57,10 @@ export default function App() {
       <ReanderId />
       <MyNewComponent/>
       <MyNewComponent/>
+      <Login/>
 
-      <MyNewComponentt/>
+
+      <Mybutton/>
  
       <Button
         title="Button1"

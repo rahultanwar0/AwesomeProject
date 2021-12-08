@@ -7,14 +7,14 @@ import {
 } from 'react-native';
 
 
-const NewMyConstants = () =>{
+export function Mybutton(){
     return(
         <View>
             <Text>
-                This is new My components form other file
+                This is new My components form other fileee
             </Text>
         </View>
     )
 }
 
-export default NewMyConstants;
+ 
