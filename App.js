@@ -40,7 +40,7 @@ export default function App() {
   const [modalw, setModal] = useState(false);
 
   return (
-    <View>
+    <View style={style.container}>
       {
         // name ? <Text>{name}</Text> : <Text>no name</Text>
         // name && <Text>{name}</Text>
@@ -110,6 +110,41 @@ export default function App() {
           setModal(true);
         }}
       />
+
+      <MyBox/>
+
+
     </View>
+  );
+}
+const style = StyleSheet.create({
+  myBox:{
+    backgroundColor:"red",
+    width:100,
+    height:80,
+    borderWidth:1
+  },
+  container:{
+    flex:1,
+    backgroundColor:"pink"
+    ,
+    //  flexDirection:"row"
+    // justifyContent:"space-between",
+    // justifyContent:"space-evenly"
+    justifyContent:"space-around"
+
+
+ 
+
+    
+
+
+  }
+  
+})
+
+const MyBox = () =>{
+  return(
+    <View style={style.myBox}/>
   );
 }
