@@ -14,6 +14,14 @@ import {
   Modal,
 } from 'react-native';
 
+const MyNewComponent = () =>{
+  return (
+    <View>
+      <Text>My New Component</Text>
+    </View>
+  );
+};
+
 export default function App() {
   let name = 'hello world';
   let array = [
@@ -26,6 +34,7 @@ export default function App() {
       return <Text>{item.id}</Text>;
     });
   };
+ 
   const [myname, setmyname] = useState('tanwar');
   const [loading, setloading] = useState(false);
   const [modalw, setModal] = useState(false);
@@ -41,8 +50,12 @@ export default function App() {
         // })
 
         myname ? <Text>{myname}</Text> : <Text>No name</Text>
+        
       }
+
       <ReanderId />
+      <MyNewComponent/>
+ 
       <Button
         title="Button1"
         color="black"
