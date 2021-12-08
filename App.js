@@ -3,7 +3,7 @@ import {
   ToastAndroid,
   Text,
   View,
-   StyleSheet,
+  StyleSheet,
   Button,
   Alert,
   ActivityIndicator,
@@ -11,6 +11,7 @@ import {
   ScrollView,
   TouchableOpacity,
   TextInput,
+  Modal,
 } from 'react-native';
 
 export default function App() {
@@ -26,6 +27,8 @@ export default function App() {
     });
   };
   const [myname, setmyname] = useState('tanwar');
+  const [loading, setloading] = useState(false);
+  const [modalw,setModal] = useState(false);
 
   return (
     <View>
@@ -64,12 +67,38 @@ export default function App() {
 
       <TextInput
         placeholder="Type here"
-        style={{hight:50,borderWidth:2}}
-        onChangeText={(text) => {
-          console.log(text)
-          setmyname(text)
+        style={{hight: 50, borderWidth: 2}}
+        onChangeText={text => {
+          console.log(text);
+          setmyname(text);
         }}
       />
+
+      <ActivityIndicator size={40} color="primary" />
+
+      <Modal visible = {modalw}
+      onRequestClose={() => {
+        setModal(false);
+      }}
+      animationType = "slide">
+        <Text>hello sir</Text>
+        
+
+        </Modal>
+
+        <Button 
+        title="NewActivity"
+        onPress={
+          () => {
+            setModal(true);
+
+          }
+        }
+
+        />
+
     </View>
-  )
+
+  
+  );
 }
