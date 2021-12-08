@@ -11,6 +11,7 @@ import {
   ScrollView,
   TouchableOpacity,
   TextInput,
+  Image,
   Modal,
 } from 'react-native';
 import {Mybutton} from './component/Mybutton'
@@ -42,6 +43,12 @@ export default function App() {
 
   return (
     <View style={style.container}>
+
+
+
+      <Image source={require('./assets/plash.png')} style={
+        {hight:200, width:300}
+      }/>
       {
         // name ? <Text>{name}</Text> : <Text>no name</Text>
         // name && <Text>{name}</Text>
