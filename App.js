@@ -28,7 +28,7 @@ export default function App() {
   };
   const [myname, setmyname] = useState('tanwar');
   const [loading, setloading] = useState(false);
-  const [modalw,setModal] = useState(false);
+  const [modalw, setModal] = useState(false);
 
   return (
     <View>
@@ -76,29 +76,27 @@ export default function App() {
 
       <ActivityIndicator size={40} color="primary" />
 
-      <Modal visible = {modalw}
-      onRequestClose={() => {
-        setModal(false);
-      }}
-      animationType = "slide">
+      <Modal
+        visible={modalw}
+        onRequestClose={() => {
+          setModal(false);
+        }}
+        animationType="slide">
         <Text>hello sir</Text>
-        
-
-        </Modal>
-
-        <Button 
-        title="NewActivity"
-        onPress={
-          () => {
-            setModal(true);
-
-          }
-        }
-
+        <Button
+          title="Back To Main Modal"
+          onPress={() => {
+            setModal(false);
+          }}
         />
+      </Modal>
 
+      <Button
+        title="New Modal"
+        onPress={() => {
+          setModal(true);
+        }}
+      />
     </View>
-
-  
   );
 }
