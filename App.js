@@ -13,7 +13,7 @@ import {
   TextInput,
   Modal,
 } from 'react-native';
-
+import MyNewComponentt from './component/Mybutton'
 const MyNewComponent = () =>{
   return (
     <View>
@@ -55,6 +55,9 @@ export default function App() {
 
       <ReanderId />
       <MyNewComponent/>
+      <MyNewComponent/>
+
+      <MyNewComponentt/>
  
       <Button
         title="Button1"
