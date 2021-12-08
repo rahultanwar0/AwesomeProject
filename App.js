@@ -1,30 +1,33 @@
-import React, {Profiler,useState} from 'react';
+import React, {Profiler, useState} from 'react';
 import {
   ToastAndroid,
   Text,
   View,
-  StyleSheet,
+   StyleSheet,
   Button,
   Alert,
   ActivityIndicator,
   ScrollViewComponent,
   ScrollView,
+  TouchableOpacity,
+  TextInput,
 } from 'react-native';
 
- 
 export default function App() {
-  let name = "hello world"
-  let array = [{id:"1",name:"rahul"},{id:"2",name:"deepak"},{id:"3",name:"sachin"}]
-  const ReanderId = () =>{
-    return array.map(item=> {
-        return <Text>{item.id}</Text>
-      })
-    
-  }
-  const [myname,setmyname] = useState("tanwar")
-  
+  let name = 'hello world';
+  let array = [
+    {id: '1', name: 'rahul'},
+    {id: '2', name: 'deepak'},
+    {id: '3', name: 'sachin'},
+  ];
+  const ReanderId = () => {
+    return array.map(item => {
+      return <Text>{item.id}</Text>;
+    });
+  };
+  const [myname, setmyname] = useState('tanwar');
 
-   return (
+  return (
     <View>
       {
         // name ? <Text>{name}</Text> : <Text>no name</Text>
@@ -34,32 +37,38 @@ export default function App() {
         //   return <Text>{item.name}</Text>
         // })
 
-        myname ? <Text>{myname}</Text>:<Text>No name</Text>
-
+        myname ? <Text>{myname}</Text> : <Text>No name</Text>
       }
-      <ReanderId/>
-       <Button
-      title = "Button1"
-      color= "black"
-      onPress={
-        () =>{
+      <ReanderId />
+      <Button
+        title="Button1"
+        color="black"
+        onPress={() => {
+          setmyname('Button1');
+        }}
+      />
+      <Button
+        title="Button2"
+        color="black"
+        onPress={() => {
+          setmyname('Button2');
+        }}
+      />
 
-           setmyname("Button1")
-        }
-      }/>
-       <Button
-      title = "Button2"
-      color= "black"
-      onPress={
-        () =>{
+      <TouchableOpacity
+        onPress={() => {
+          console.log('hello');
+        }}>
+        <Text>TouchableOpacity</Text>
+      </TouchableOpacity>
 
-           setmyname("Button2")
-        }
-      }/>
-
-
-      <Image  source={require('./assets/plash.png')} style={{height:100,width:100}}/>
-      
-     </View>
-  );
+      <TextInput
+        placeholder="Type here"
+        style={{hight:50,borderWidth:2}}
+        onChangeText={(text) => {
+          Console.log(text)
+        }}
+      />
+    </View>
+  )
 }
