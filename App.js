@@ -66,7 +66,7 @@ export default function App() {
         placeholder="Type here"
         style={{hight:50,borderWidth:2}}
         onChangeText={(text) => {
-          Console.log(text)
+          console.log(text)
         }}
       />
     </View>
