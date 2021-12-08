@@ -67,6 +67,7 @@ export default function App() {
         style={{hight:50,borderWidth:2}}
         onChangeText={(text) => {
           console.log(text)
+          setmyname(text);
         }}
       />
     </View>
