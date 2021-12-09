@@ -23,6 +23,11 @@ const MyNewComponent = () =>{
     </View>
   );
 };
+function lert(){
+
+ 
+  alert("njdcw","dhdcj")
+}
 
 export default function App() {
   let name = 'hello world';
@@ -68,6 +73,12 @@ export default function App() {
 
 
       <Mybutton/>
+      <Button
+      title="function"
+      color="primary"
+      onPress={
+        lert
+      }/>
  
       <Button
         title="Button1"
