@@ -28,8 +28,25 @@ export default function App() {
   const [loading, setloading] = useState(false);
   const [modalw, setModal] = useState(false);
 
+  const getJoke = async ()=>{
+  const res = await  fetch("http://api.icndb.com/jokes/random?firstName=John&lastName=Doe")
+  const result = await res.json()
+  console.log(result)
+  }
+
   return (
     <View style={style.container}>
+
+      <Text>Joles App</Text>
+
+      <Button
+      title="Get Jokes"
+      onPress={() => {
+        getJoke()
+      }}/>
+
+
+
       <Progresss />
       <ShowListInTextView />
       <Login />
