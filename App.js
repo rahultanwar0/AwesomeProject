@@ -19,6 +19,7 @@ import {MyAlertBox} from './components/AlertDialog';
 import {ShowListInTextView} from './components/ShowListInTextView';
 import {Touchhablecomponent} from './components/TouchAbleComp';
 import {MyPdfImage} from './components/MyImageViewContainer';
+import {MyJokes} from './components/JokeFromInternet';
 import {MyBox} from './components/Mybox';
 import {Progresss} from './components/Progressj';
 import Login from './components/Login';
@@ -27,29 +28,10 @@ export default function App() {
   const [myname, setmyname] = useState('tanwar');
   const [loading, setloading] = useState(false);
   const [modalw, setModal] = useState(false);
-  const [jokes,setjoke] = useState("")
 
-
-  const getJoke = async ()=>{
-  const res = await  fetch("http://api.icndb.com/jokes/random?firstName=John&lastName=Doe")
-  const result = await res.json()
-   setjoke(result.value.joke)
-  }
- return (
+  return (
     <View style={style.container}>
-
-      <Text>Joles App</Text>
-
-      <Button
-      title="Get Jokes"
-      onPress={() => {
-        getJoke()
-      }}/>
-
-
-      {jokes?<Text>{jokes}</Text>:null}
-
-
+      <MyJokes />
 
       <Progresss />
       <ShowListInTextView />
@@ -62,7 +44,6 @@ export default function App() {
         style={{hight: 200, width: 300}}
       />
 
- 
       {
         // name ? <Text>{name}</Text> : <Text>no name</Text>
         // name && <Text>{name}</Text>
