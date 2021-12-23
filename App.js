@@ -14,9 +14,9 @@ import {
   Image,
   Modal,
 } from 'react-native';
-import {Mybutton} from './component/Mybutton'
-import {MyAlertBox} from './component/AlertDialog'
-import { MyPdfImage} from './component/MyImageViewContainer';
+import {Mybutton} from './components/Mybutton'
+import {MyAlertBox} from './components/AlertDialog'
+import { MyPdfImage} from './components/MyImageViewContainer';
 import Login from './components/Login'
 const MyNewComponent = () =>{
   return (
@@ -50,9 +50,14 @@ export default function App() {
     <View style={style.container}>
 
 
+<Image
+        source={require('./assets/plash.png')}
+        style={{hight: 200, width: 300}}
+      />
 
-    <MyPdfImage/>
 
+
+ 
        
      
       {
