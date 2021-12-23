@@ -15,6 +15,7 @@ import {
   Modal,
 } from 'react-native';
 import {Mybutton} from './component/Mybutton'
+import {MyAlertBox} from './component/AlertDialog'
 import Login from './components/Login'
 const MyNewComponent = () =>{
   return (
@@ -24,9 +25,7 @@ const MyNewComponent = () =>{
   );
 };
 function lert(){
-
- 
-  alert("njdcw","dhdcj")
+ alert("njdcw","dhdcj")
 }
 
 export default function App() {
@@ -73,12 +72,7 @@ export default function App() {
 
 
       <Mybutton/>
-      <Button
-      title="function"
-      color="primary"
-      onPress={
-        lert
-      }/>
+      <MyAlertBox/>
  
       <Button
         title="Button1"
