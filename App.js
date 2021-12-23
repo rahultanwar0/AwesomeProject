@@ -19,6 +19,7 @@ import {MyAlertBox} from './components/AlertDialog';
 import {ShowListInTextView} from './components/ShowListInTextView';
 import {Touchhablecomponent} from './components/TouchAbleComp';
 import {MyPdfImage} from './components/MyImageViewContainer';
+import {MyBox} from './components/Mybox';
 import {Progresss} from './components/Progressj';
 import Login from './components/Login';
 const MyNewComponent = () => {
@@ -55,6 +56,7 @@ export default function App() {
         source={require('./assets/plash.png')}
         style={{hight: 200, width: 300}}
       />
+
 
       {
         // name ? <Text>{name}</Text> : <Text>no name</Text>
@@ -126,8 +128,13 @@ export default function App() {
         }}
       />
 
-      <MyBox />
-    </View>
+      {/* <MyBox /> */}
+      <MyBox/>
+       
+
+
+ 
+     </View>
   );
 }
 const style = StyleSheet.create({
@@ -147,6 +154,4 @@ const style = StyleSheet.create({
   },
 });
 
-const MyBox = () => {
-  return <View style={style.myBox} />;
-};
+ 
