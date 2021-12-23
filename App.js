@@ -16,9 +16,10 @@ import {
 } from 'react-native';
 import {Mybutton} from './components/Mybutton';
 import {MyAlertBox} from './components/AlertDialog';
-import {ShowListInTextView} from './components/ShowListInTextView'
+import {ShowListInTextView} from './components/ShowListInTextView';
 import {Touchhablecomponent} from './components/TouchAbleComp';
 import {MyPdfImage} from './components/MyImageViewContainer';
+import {Progresss} from './components/Progressj';
 import Login from './components/Login';
 const MyNewComponent = () => {
   return (
@@ -66,11 +67,10 @@ export default function App() {
         myname ? <Text>{myname}</Text> : <Text>No name</Text>
       }
 
+      <ShowListInTextView />
 
-      <ShowListInTextView/> 
-      
-       <MyNewComponent />
-       
+      <MyNewComponent />
+
       <MyNewComponent />
       <Login />
 
@@ -102,8 +102,7 @@ export default function App() {
           setmyname(text);
         }}
       />
-
-      <ActivityIndicator size={40} color="primary" />
+      <Progresss />
 
       <Modal
         visible={modalw}
