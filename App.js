@@ -67,7 +67,9 @@ export default function App() {
       }
 
 
-      <ShowListInTextView/>  <MyNewComponent />
+      <ShowListInTextView/> 
+      
+       <MyNewComponent />
        
       <MyNewComponent />
       <Login />
