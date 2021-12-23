@@ -1,9 +1,9 @@
 import React, {Profiler, useState} from 'react';
 import {
    
-  Text,
-  View
-   
+    Text,
+    View
+     
 } from 'react-native';
 
 
