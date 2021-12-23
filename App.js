@@ -22,20 +22,26 @@ import {MyPdfImage} from './components/MyImageViewContainer';
 import {MyBox} from './components/Mybox';
 import {Progresss} from './components/Progressj';
 import Login from './components/Login';
- 
 
 export default function App() {
-   const [myname, setmyname] = useState('tanwar');
+  const [myname, setmyname] = useState('tanwar');
   const [loading, setloading] = useState(false);
   const [modalw, setModal] = useState(false);
 
   return (
     <View style={style.container}>
+      <Progresss />
+      <ShowListInTextView />
+      <Login />
+      <MyAlertBox />
+      <Touchhablecomponent />
+      <MyBox />
       <Image
         source={require('./assets/plash.png')}
         style={{hight: 200, width: 300}}
       />
 
+ 
       {
         // name ? <Text>{name}</Text> : <Text>no name</Text>
         // name && <Text>{name}</Text>
@@ -46,14 +52,6 @@ export default function App() {
 
         myname ? <Text>{myname}</Text> : <Text>No name</Text>
       }
-
-      <ShowListInTextView />
-
-    
-      <Login />
-
-      <Mybutton />
-      <MyAlertBox />
 
       <Button
         title="Button1"
@@ -70,8 +68,6 @@ export default function App() {
         }}
       />
 
-      <Touchhablecomponent />
-
       <TextInput
         placeholder="Type here"
         style={{hight: 50, borderWidth: 2}}
@@ -80,7 +76,6 @@ export default function App() {
           setmyname(text);
         }}
       />
-      <Progresss />
 
       <Modal
         visible={modalw}
@@ -103,8 +98,6 @@ export default function App() {
           setModal(true);
         }}
       />
-
-      <MyBox />
     </View>
   );
 }
