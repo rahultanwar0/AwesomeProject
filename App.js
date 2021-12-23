@@ -22,31 +22,10 @@ import {MyPdfImage} from './components/MyImageViewContainer';
 import {MyBox} from './components/Mybox';
 import {Progresss} from './components/Progressj';
 import Login from './components/Login';
-const MyNewComponent = () => {
-  return (
-    <View>
-      <Text>My New Component</Text>
-    </View>
-  );
-};
-function lert() {
-  alert('njdcw', 'dhdcj');
-}
+ 
 
 export default function App() {
-  let name = 'hello world';
-  let array = [
-    {id: '1', name: 'rahul'},
-    {id: '2', name: 'deepak'},
-    {id: '3', name: 'sachin'},
-  ];
-  const ReanderId = () => {
-    return array.map(item => {
-      return <Text>{item.id}</Text>;
-    });
-  };
-
-  const [myname, setmyname] = useState('tanwar');
+   const [myname, setmyname] = useState('tanwar');
   const [loading, setloading] = useState(false);
   const [modalw, setModal] = useState(false);
 
@@ -56,7 +35,6 @@ export default function App() {
         source={require('./assets/plash.png')}
         style={{hight: 200, width: 300}}
       />
-
 
       {
         // name ? <Text>{name}</Text> : <Text>no name</Text>
@@ -71,9 +49,7 @@ export default function App() {
 
       <ShowListInTextView />
 
-      <MyNewComponent />
-
-      <MyNewComponent />
+    
       <Login />
 
       <Mybutton />
@@ -128,22 +104,11 @@ export default function App() {
         }}
       />
 
-      {/* <MyBox /> */}
-      <MyBox/>
-       
-
-
- 
-     </View>
+      <MyBox />
+    </View>
   );
 }
 const style = StyleSheet.create({
-  myBox: {
-    backgroundColor: 'red',
-    width: 100,
-    height: 80,
-    borderWidth: 1,
-  },
   container: {
     flex: 1,
     backgroundColor: 'pink',
@@ -153,5 +118,3 @@ const style = StyleSheet.create({
     justifyContent: 'space-around',
   },
 });
-
- 
