@@ -14,19 +14,20 @@ import {
   Image,
   Modal,
 } from 'react-native';
-import {Mybutton} from './components/Mybutton'
-import {MyAlertBox} from './components/AlertDialog'
-import { MyPdfImage} from './components/MyImageViewContainer';
-import Login from './components/Login'
-const MyNewComponent = () =>{
+import {Mybutton} from './components/Mybutton';
+import {MyAlertBox} from './components/AlertDialog';
+import {Touchhablecomponent} from './components/TouchAbleComp';
+import {MyPdfImage} from './components/MyImageViewContainer';
+import Login from './components/Login';
+const MyNewComponent = () => {
   return (
     <View>
       <Text>My New Component</Text>
     </View>
   );
 };
-function lert(){
- alert("njdcw","dhdcj")
+function lert() {
+  alert('njdcw', 'dhdcj');
 }
 
 export default function App() {
@@ -41,25 +42,18 @@ export default function App() {
       return <Text>{item.id}</Text>;
     });
   };
- 
+
   const [myname, setmyname] = useState('tanwar');
   const [loading, setloading] = useState(false);
   const [modalw, setModal] = useState(false);
 
   return (
     <View style={style.container}>
-
-
-<Image
+      <Image
         source={require('./assets/plash.png')}
         style={{hight: 200, width: 300}}
       />
 
-
-
- 
-       
-     
       {
         // name ? <Text>{name}</Text> : <Text>no name</Text>
         // name && <Text>{name}</Text>
@@ -69,18 +63,16 @@ export default function App() {
         // })
 
         myname ? <Text>{myname}</Text> : <Text>No name</Text>
-        
       }
 
       <ReanderId />
-      <MyNewComponent/>
-      <MyNewComponent/>
-      <Login/>
+      <MyNewComponent />
+      <MyNewComponent />
+      <Login />
 
+      <Mybutton />
+      <MyAlertBox />
 
-      <Mybutton/>
-      <MyAlertBox/>
- 
       <Button
         title="Button1"
         color="black"
@@ -96,12 +88,7 @@ export default function App() {
         }}
       />
 
-      <TouchableOpacity
-        onPress={() => {
-          console.log('hello');
-        }}>
-        <Text>TouchableOpacity</Text>
-      </TouchableOpacity>
+      <Touchhablecomponent />
 
       <TextInput
         placeholder="Type here"
@@ -136,40 +123,27 @@ export default function App() {
         }}
       />
 
-      <MyBox/>
-
-
+      <MyBox />
     </View>
   );
 }
 const style = StyleSheet.create({
-  myBox:{
-    backgroundColor:"red",
-    width:100,
-    height:80,
-    borderWidth:1
+  myBox: {
+    backgroundColor: 'red',
+    width: 100,
+    height: 80,
+    borderWidth: 1,
   },
-  container:{
-    flex:1,
-    backgroundColor:"pink"
-    ,
+  container: {
+    flex: 1,
+    backgroundColor: 'pink',
     //  flexDirection:"row"
     // justifyContent:"space-between",
     // justifyContent:"space-evenly"
-    justifyContent:"space-around"
+    justifyContent: 'space-around',
+  },
+});
 
-
- 
-
-    
-
-
-  }
-  
-})
-
-const MyBox = () =>{
-  return(
-    <View style={style.myBox}/>
-  );
-}
+const MyBox = () => {
+  return <View style={style.myBox} />;
+};
