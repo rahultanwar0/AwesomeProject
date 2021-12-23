@@ -27,14 +27,15 @@ export default function App() {
   const [myname, setmyname] = useState('tanwar');
   const [loading, setloading] = useState(false);
   const [modalw, setModal] = useState(false);
+  const [jokes,setjoke] = useState("")
+
 
   const getJoke = async ()=>{
   const res = await  fetch("http://api.icndb.com/jokes/random?firstName=John&lastName=Doe")
   const result = await res.json()
-  console.log(result)
+   setjoke(result.value.joke)
   }
-
-  return (
+ return (
     <View style={style.container}>
 
       <Text>Joles App</Text>
@@ -44,6 +45,9 @@ export default function App() {
       onPress={() => {
         getJoke()
       }}/>
+
+
+      {jokes?<Text>{jokes}</Text>:null}
 
 
 
