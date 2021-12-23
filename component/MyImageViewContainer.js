@@ -15,13 +15,12 @@ import {
   Modal,
 } from 'react-native';
 
-export function MyimageContainers() {
+export function MyPdfImage() {
   return (
     <View>
       <Image
         source={require('./assets/plash.png')}
         style={{hight: 200, width: 300}}
-      />
-    </View>
+      /> </View>
   );
 }
