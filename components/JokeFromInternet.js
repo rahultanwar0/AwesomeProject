@@ -37,7 +37,13 @@ export function MyJokes() {
         }}
       />
 
-      {jokes ? <Text>{jokes}</Text> : null}
+      {jokes ? <Text style={{
+          fontSize:20,
+          fontcolor:'red',
+          backgroundColor:'#fff',
+
+
+      }}>{jokes}</Text> : null}
     </View>
   );
 }

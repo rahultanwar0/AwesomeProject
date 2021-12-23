@@ -95,6 +95,9 @@ export default function App() {
             setModal(false);
           }}
         />
+
+
+        <MyJokes/>
       </Modal>
 
       <Button
