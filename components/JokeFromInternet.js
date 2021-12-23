@@ -1,4 +1,4 @@
-import React, {Profiler, useState} from 'react';
+import React, {Profiler, useState,useEffect} from 'react';
 import {
   ToastAndroid,
   Text,
@@ -24,6 +24,10 @@ export function MyJokes() {
     const result = await res.json();
     setjoke(result.value.joke);
   };
+
+  useEffect(() => {
+      getJoke(),[]
+  })
   return (
     <View>
       <Button

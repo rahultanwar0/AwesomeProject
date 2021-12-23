@@ -1,4 +1,4 @@
-import React, {Profiler, useState} from 'react';
+import React, {Profiler, useState,useEffect} from 'react';
 import {
   ToastAndroid,
   Text,
@@ -28,6 +28,9 @@ export default function App() {
   const [myname, setmyname] = useState('tanwar');
   const [loading, setloading] = useState(false);
   const [modalw, setModal] = useState(false);
+
+
+  
 
   return (
     <View style={style.container}>
