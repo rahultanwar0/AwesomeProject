@@ -16,6 +16,7 @@ import {
 } from 'react-native';
 import {Mybutton} from './components/Mybutton';
 import {MyAlertBox} from './components/AlertDialog';
+import {ShowListInTextView} from './components/ShowListInTextView'
 import {Touchhablecomponent} from './components/TouchAbleComp';
 import {MyPdfImage} from './components/MyImageViewContainer';
 import Login from './components/Login';
@@ -65,8 +66,9 @@ export default function App() {
         myname ? <Text>{myname}</Text> : <Text>No name</Text>
       }
 
-      <ReanderId />
-      <MyNewComponent />
+
+      <ShowListInTextView/>  <MyNewComponent />
+       
       <MyNewComponent />
       <Login />
 
