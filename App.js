@@ -35,15 +35,23 @@ export default function App() {
 
   return (
     <View style={style.container}>
+
+
+      <ScrollView>
+
+
       <MyJokes />
 
-      <Progresss />
-      <ShowListInTextView />
-      <Login />
-      <MyAlertBox />
-      <Touchhablecomponent />
-      <MyBox />
-      <Image
+<Progresss />
+<ShowListInTextView />
+<Login />
+<MyAlertBox />
+<Touchhablecomponent />
+<MyBox />
+
+
+
+<Image
         source={require('./assets/plash.png')}
         style={{hight: 200, width: 300}}
       />
@@ -107,6 +115,10 @@ export default function App() {
           setModal(true);
         }}
       />
+
+      </ScrollView>
+     
+     
     </View>
   );
 }
